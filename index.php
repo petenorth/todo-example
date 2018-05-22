@@ -83,7 +83,7 @@ EOD;
 
   if ( isset( $_POST['amq'] ) && $_POST['amq'] == "send" ) {
     $amq_result = "";
-    $stomp = new Client('tcp://broker-amq-tcp:61613');
+    $stomp = new Client('tcp://syndesis-amq-tcp:61613');
     $stomp->setLogin($AMQ_USER, $AMQ_PASS);
     try {
       $stomp->connect();
